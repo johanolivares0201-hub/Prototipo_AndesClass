@@ -1,0 +1,18 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { DemoClockProvider } from './store/DemoClock';
+import { StoreProvider } from './store/Store';
+import { Layout } from './components/Layout';
+import { Dashboard } from './pages/Dashboard';
+import { Inventory } from './pages/Inventory';
+import { NormativeMatrix } from './pages/NormativeMatrix';
+import { Transfers } from './pages/Transfers';
+import { Consents } from './pages/Consents';
+import { Incidents } from './pages/Incidents';
+import { SourcesVerification } from './pages/SourcesVerification';
+import { Findings } from './pages/Findings';
+import { EvidenceReports } from './pages/EvidenceReports';
+import styles from './styles.module.css';
+document.getElementById('root')!.className = styles.root;
+createRoot(document.getElementById('root')!).render(<StrictMode><DemoClockProvider><StoreProvider><HashRouter><Routes><Route element={<Layout />}><Route index element={<Dashboard />}/><Route path="inventario" element={<Inventory />}/><Route path="fuentes" element={<SourcesVerification />}/><Route path="hallazgos" element={<Findings />}/><Route path="matriz" element={<NormativeMatrix />}/><Route path="transferencias" element={<Transfers />}/><Route path="consentimientos" element={<Consents />}/><Route path="incidentes" element={<Incidents />}/><Route path="evidencias" element={<EvidenceReports />}/><Route path="*" element={<Navigate to="/" replace/>}/></Route></Routes></HashRouter></StoreProvider></DemoClockProvider></StrictMode>);

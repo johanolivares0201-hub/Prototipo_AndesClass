@@ -1,0 +1,12 @@
+import type { Category, Jurisdiction, LegalBasis, Purpose } from '../types';
+export const countryLabels: Record<Jurisdiction, string> = { PE: 'Perú', ES_UE: 'España / UE', MX: 'México', CO: 'Colombia', US: 'Estados Unidos' };
+export const jurisdictionLabels = { ...countryLabels, por_confirmar: 'Países por confirmar' };
+export const evidenceStatusLabels = { pendiente: 'Pendiente', cumple: 'Cumple', no_cumple: 'No cumple' };
+export const notificationStatusLabels = { pendiente: 'Pendiente', enviada: 'Enviada', no_requerida: 'No requerida' };
+export const requiredLabels = { si: 'Sí', no: 'No', por_evaluar: 'Por evaluar' };
+export const accessLabels = { desconocido: 'Desconocido', sin_accesos_detectados: 'Sin accesos detectados', accesos_detectados: 'Accesos detectados' };
+export const auditActionLabels: Record<string, string> = { ADD_ASSET: 'Agregar dato', UPDATE_ASSET: 'Editar dato', DELETE_ASSET: 'Eliminar dato', ADD_PROVIDER: 'Agregar proveedor', UPDATE_PROVIDER: 'Editar proveedor', DELETE_PROVIDER: 'Eliminar proveedor', UPDATE_CONSENT: 'Cambiar consentimiento', LOAD_SCENARIO: 'Cargar escenario inicial', LOAD_CORRECTED: 'Cargar escenario corregido', LOAD_INCIDENT: 'Cargar escenario con incidente', RESET_DEMO: 'Reiniciar demo', UPDATE_INCIDENT: 'Editar incidente', UPDATE_EVIDENCE: 'Actualizar evidencia' };
+export const categoryLabels: Record<Category, string> = { identificacion: 'Identificación', contacto: 'Contacto', ubicacion: 'Ubicación', academico: 'Académico', comportamiento: 'Comportamiento', salud: 'Salud', otro: 'Otro' };
+export const purposeLabels: Record<Purpose, string> = { servicio: 'Servicio', bienestar: 'Bienestar', analitica: 'Analítica', publicidad: 'Publicidad', recomendaciones: 'Recomendaciones' };
+export const basisLabels: Record<LegalBasis, string> = { consentimiento: 'Consentimiento', consentimiento_escrito: 'Consentimiento escrito', consentimiento_explicito: 'Consentimiento explícito', contrato: 'Contrato', interes_legitimo: 'Interés legítimo', ninguna: 'Ninguna' };
+export const mechanismLabels = { ninguno: 'Ninguno', clausulas_tipo: 'Cláusulas contractuales tipo', dpf: 'Data Privacy Framework', otro: 'Otro' };
